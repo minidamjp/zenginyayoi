@@ -1,10 +1,11 @@
 <main class="main">
   <div class="content">
-    <div>
-      <textarea rows="10" cols="50" [(ngModel)]="content"></textarea>
+      <!-- テキストエリア -->
+      <div class="drop-zone" (drop)="onDrop($event)" (dragover)="onDragOver($event)">
+        <textarea rows="10" cols="50" [(ngModel)]="content"></textarea>
+      </div>
       <button (click)="download()">SJISでダウンロード</button>
-    </div>
-    </div>
+  </div>
 </main>
 
 
